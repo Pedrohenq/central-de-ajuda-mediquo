@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Central de Suporte | FAQ e Chamados</title>
+    <meta name="description" content="Central de ajuda e suporte. Encontre respostas para suas dúvidas sobre telemedicina, consultas online e muito mais." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Hidden forms for Netlify discovery (Must match ALL fields used in React) -->
+    <form name="chamado-suporte" data-netlify="true" hidden>
+      <input type="text" name="Nome" />
+      <input type="email" name="Email" />
+      <input type="text" name="CPF" />
+      <textarea name="Descricao"></textarea>
+      <input type="text" name="Formulario" />
+      <input type="text" name="Especialidade Desejada" />
+      <input type="text" name="Data e Hora Tentada" />
+      <input type="text" name="O que ocorreu?" />
+      <input type="text" name="Especialidade da Consulta" />
+      <input type="text" name="Nome do Médico (se souber)" />
+      <input type="text" name="Tipo de Problema" />
+      <input type="text" name="Data/Hora da Consulta" />
+      <input type="text" name="Tipo de Documento" />
+      <input type="text" name="Qual o erro?" />
+      <input type="text" name="Data da Consulta original" />
+      <input type="text" name="Dispositivo" />
+      <input type="text" name="Modelo do Aparelho" />
+      <input type="text" name="Versão do App" />
+      <input type="text" name="Onde ocorre o erro?" />
+      <input type="text" name="Motivo do Contato" />
+      <input type="text" name="Valor da Transação" />
+      <input type="text" name="Data da Cobrança" />
+      <input type="text" name="Últimos 4 dígitos do cartão" />
+      <input type="text" name="Nome da Empresa/Convênio" />
+      <input type="text" name="O Código que você tem" />
+      <input type="text" name="Problema exato" />
+      <input type="text" name="Parceiro" />
+      <input type="text" name="Quantidade Comprada" />
+      <input type="text" name="Data da Compra" />
+      <input type="text" name="O que você precisa?" />
+      <input type="text" name="Nome do Cliente" />
+    </form>
+
+    <form name="chamado-vero" data-netlify="true" hidden>
+      <input type="text" name="nome" />
+      <input type="email" name="email" />
+      <input type="tel" name="telefone" />
+      <input type="text" name="cpf" />
+      <input type="number" name="quantidade" />
+      <input type="date" name="dataCompra" />
+      <input type="text" name="valor" />
+      <textarea name="descricao"></textarea>
+    </form>
+
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.$zoho=window.$zoho || {};
+      $zoho.salesiq=$zoho.salesiq||{ready:function(){}};
+      // Hide the Zoho chat widget by default
+      $zoho.salesiq.ready=function(){
+        $zoho.salesiq.floatwindow.visible("hide");
+      }
+    </script>
+    <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq99685bb2945c60e6ad11d849756746d654d4ed6060181799059527b296484e9d" defer></script>
+  </body>
+</html>
